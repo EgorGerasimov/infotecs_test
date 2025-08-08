@@ -64,4 +64,7 @@
 
     - `Logger` - класс для создания логов. В каждой переменной класса `TaskManager` свой логгер, который пишет в свой лог файл, чтобы не было путаницы в логах и не нагружать программу лишними мьютексами.
 
-## Мой GitHub https://github.com/EgorGerasimov
+## Contact information
+
+### Мой GitHub: https://github.com/EgorGerasimov
+### Moй TG: @Egor691
