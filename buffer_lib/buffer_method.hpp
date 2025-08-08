@@ -113,3 +113,8 @@ void Buffer<T>::read() {
        i++, count++);
   std::cout << count << " elements in buffer now\n";
 }
+
+template <typename T>
+int Buffer<T>::lenght() {
+  return data.size();
+};

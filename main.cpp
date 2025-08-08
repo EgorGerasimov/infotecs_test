@@ -22,10 +22,16 @@ int main() {
           TasksChange.add_task([&buffer, i]() { buffer.insert(i); });
         break;
       case 2:
-        TasksChange.logger.create_log(Logger::INFO,
-                                      "Removing 100000 elements started");
-        for (int i = 0; i < 100'000; i++)
-          TasksChange.add_task([&buffer]() { buffer.remove(); });
+        if (buffer.lenght() >= 100'000) {
+          TasksChange.logger.create_log(Logger::INFO,
+                                        "Removing 100000 elements started");
+          for (int i = 0; i < 100'000; i++)
+            TasksChange.add_task([&buffer]() { buffer.remove(); });
+        } else {
+          TasksChange.logger.create_log(
+              Logger::ERROR, "There are not 100000 elements in the buffer");
+          std::cout << "You haven't added the elements yet\n";
+        }
         break;
       case 3:
         TasksChange.logger.create_log(Logger::INFO,

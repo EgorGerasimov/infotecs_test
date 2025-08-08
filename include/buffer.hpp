@@ -28,6 +28,7 @@ class Buffer {
   int count_even_positioned();
   int count_odd_positioned();
   void read();
+  int lenght();
 };
 
 #include "../buffer_lib/buffer_method.hpp"
